@@ -1,0 +1,58 @@
+/* Login Page */
+
+.login-page {
+    background-image: linear-gradient(#4B7ED6, #174FAD);
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+  
+  .login-card {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 20vh;
+    left: 30vw;
+    padding-top: 7vh;
+    padding-bottom: 2vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 30vw;
+    text-align: center;
+    background-color: white;
+    border-radius: 22px;
+    display: grid;
+  }
+
+  .login-user{
+    cursor: pointer;
+    width: 30vw;
+    padding: 5px;
+    margin: 2vh;
+    border-radius: 8px;
+  }
+
+  .login-password{
+    cursor: pointer;
+    width: 30vw;
+    padding: 5px;
+    margin: 2vh;
+    border-radius: 8px;
+  }
+  
+  .login-button {
+    cursor: pointer;
+    color: white;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    margin-top: 3vh;
+    width: 28.2vw;
+    padding: 1.5vh;
+    border-radius: 8px;
+    display: inline-block;
+    background-color: #4B7ED6;
+  }

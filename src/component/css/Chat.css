@@ -1,0 +1,256 @@
+    .chat{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10vh;
+        padding-left: 1vw;
+        margin-left: 20px;
+        width: 60vw;
+        background-color: var(--color2-color);
+        color: black;
+        font-size: 2.5vh;
+    }
+  
+    .header{
+        height: 5vh;
+    }
+
+    .chat-header{
+        color: var(--color1-color);
+        font-size: 4vh;
+        font-weight: 700;
+    }
+
+
+
+
+    .messages{
+        height: 80vh;
+        width: 55vw;
+        overflow-y: auto;
+        scrollbar-width: thin; 
+    }
+
+      .messages::-webkit-scrollbar {
+        width: 3px; /* Ширина прокрутки */
+      }
+
+      .messages::-webkit-scrollbar-thumb {
+        background-color: var(--color1-color);      /* Цвет ползунка */
+        border-radius: 30px;
+      }
+
+      .messages::-webkit-scrollbar-track {
+        background-color: var(--color2-color); /* Цвет трека */
+      }
+
+
+
+
+    .massage-div-request{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3vh;
+    }
+
+    .massage-div-request-text-avatar{
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: 20px;
+    }
+
+    .massage-div-request-text{
+            margin-top: 8px;
+            font-size: 2.5vh;
+            font-weight: bolder;
+    }
+
+    .massage-div-request-avatar{
+            margin-left: 10px;
+            margin-right: 5px;
+            color: #000066;
+    }
+    
+    .message-request {
+        margin-left: auto;
+        margin-right: 60px;
+        margin-top: 3px;
+        padding: 7px;
+        width: 40vw;
+        font-size: 2vh;
+        background-color: var(--color5-color); 
+        border: 2px solid #4a4a4a;
+        border-radius: 7px 0px 7px 7px;
+        word-wrap: break-word;
+        white-space: pre-line;
+        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .message-div-request-date-sending{
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: 65px;
+    }
+
+    .date-sending-message-request{
+        font-size: 1.2vh;
+        color: #888;
+        width: 6.5vw;
+        padding-top: 1vh;
+        padding-left: 2.5vw;
+    }
+
+    .div-date-header-divider{
+        display: flex; 
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .date-header{
+        font-size: 1.5vh;
+        font-weight: bold;
+        color: white;
+        background-color: var(--color1-color);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 3px;
+    }
+
+    .date-divider {
+        margin-top: 2px;
+        border: 1px solid #ccc;
+        margin: 5px 10px;
+        height: 0.5px;
+        width: 23vw;
+        border-color: var(--color1-color);
+    }
+
+    .massage-div-answer{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3vh;
+    }
+
+    .massage-div-answer-text-avatar{
+        display: flex; 
+        flex-direction: row;
+        margin-right: auto;
+        margin-left: 5px;
+    }
+
+    .message-div-answer-text{
+            margin-top: 8px; 
+            font-size: 2.5vh; 
+            font-weight: bolder;
+    }
+
+    .massage-div-answer-avatar{
+            margin-right: 5px;
+            padding-top: 8.5px; 
+            padding-bottom: 8.5px;
+            padding-left: 9px; 
+            padding-right: 9px;
+            color: var(--colorText-color);
+            background-color: #6d6b6b50;
+    }
+        
+  
+    .message-answer{
+        margin-right: auto;
+        margin-left: 60px;
+        margin-top: 3px;
+        padding: 7px;
+        width: 40vw;
+        font-size: 2vh;
+        background-color: var(--color5-color); 
+        border: 2px solid var(--color6-color);
+        border-radius: 0px 7px 7px 7px;
+        word-wrap: break-word;
+        white-space: pre-line;
+        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .message-div-answer-date-sending{
+        display: flex;
+        flex-direction: row;
+        margin-right: auto;
+        margin-left: 45px;
+    }
+
+    .date-sending-message-answer{
+        font-size: 1.2vh;
+        color: #888;
+        width: 6.5vw;
+        padding-top: 1vh;
+        padding-left: 2.5vw;
+    }
+
+    
+
+    .div-image-no-messages{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 60vh;
+        color: var(--color1-color);
+        font-size: 2.5vh;
+        font-weight: 500;
+    }
+
+    .image-no-messages{
+        margin-top: 30px;
+        width: 5vw;
+        height: 10vh;
+    }
+
+
+
+    .input-request{
+        display: flex;
+        gap: 10px;
+        height: 15vh;
+        width: 40vw;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2vh;
+        background-color: var(--color2-color);
+    }
+    
+    .input{
+        border-color: var(--color1-color);
+        border-width: 2px;
+        border-radius: 1px;
+        background-color: transparent;
+        box-shadow: 0 0 8px 3px var(--color3-color);
+        resize: none;
+        overflow-y: scroll;
+    }
+    
+              .input::-webkit-scrollbar {
+                width: 4px; /* Ширина прокрутки */
+              }
+    
+              .input::-webkit-scrollbar-thumb {
+                background-color: var(--color1-color);      /* Цвет ползунка */
+                border-radius: 30px;
+              }
+    
+              .input::-webkit-scrollbar-track {
+                background-color: var(--color3-color); /* Цвет трека */
+              }
+    
+    .send-outlined{
+        color: var(--color1-color);
+        font-size: 25px;
+    }
+
+    
+            

@@ -1,0 +1,119 @@
+.side-bar{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10vh;
+    padding-left: 1vw;
+    padding-bottom: 0.8vh;
+    width: 20vw;
+    background-color: var(--color3-color);
+    color: var(--colorText-color);
+    font-size: 3.5vh;
+    font-weight: 500;
+    border-right: 0.01vw solid black;
+    box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    scrollbar-width: thin; 
+}
+
+      .side-bar::-webkit-scrollbar {
+        width: 1.5px; /* Ширина прокрутки */
+      }
+
+      .side-bar::-webkit-scrollbar-thumb {
+        background-color: var(--color4-color);      /* Цвет ползунка */
+        border-radius: 30px;
+      }
+
+      .side-bar::-webkit-scrollbar-track {
+        background-color: var(--color3-color); /* Цвет трека */
+      }
+
+  .button-cancel-new-chat{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .button-new-chat{
+    margin-left: 60%;
+    margin-top: 1vh;
+  }
+
+  .chat-item{
+    display: flex;
+    flex-direction: column;
+    color: var(--colorText-color);
+    font-size: 2.8vh;
+    height: 10vh;
+    width: 18vw;
+    padding: 8px;
+    margin-top: 20px;
+    background-color: var(--color3-color);
+    border: 0.01vw solid var(--color1-color);
+    border-radius: 1.5vh;
+    cursor: pointer;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: var(--colorItemHover-color);
+    }
+
+    &:active {
+      background-color: var(--colorItemMouse-color);
+    }
+  }
+
+  .selected-chat{
+    display: flex;
+    flex-direction: column;
+    color: var(--colorText-color);
+    font-size: 2.8vh;
+    height: 10vh;
+    width: 18vw;
+    padding: 8px;
+    margin-top: 20px;
+    background-color: var(--colorItemMouse-color);
+    border: 0.01vw solid var(--color1-color);
+    border-radius: 1.5vh;
+    cursor: pointer;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: var(--colorItemHover-color);
+    }
+
+    &:active {
+      background-color: var(--colorItemMouse-color);
+    }
+  }
+
+  .chat-item-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5px;
+  }
+
+  .delete-chat-button{
+    font-size: 2vh;
+
+    &:hover {
+      color: rgb(145, 60, 60);
+    }
+  }
+
+  .chat-name{
+    width: 11vw;
+    padding-left: 1vw;
+    padding-top: 1vh;
+    font-size: 1.8vh;
+  }
+
+  .chat-createdAt{
+    font-size: 1.2vh;
+    color: #888;
+    width: 6.5vw;
+    padding-top: 1.7vh;
+    padding-left: 2.5vw;
+  }
