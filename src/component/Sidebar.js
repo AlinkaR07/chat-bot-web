@@ -1,14 +1,13 @@
 import React, {  useState } from "react";
-import { CloseCircleOutlined, PlusSquareOutlined, DeleteOutlined} from "@ant-design/icons"
+import { CloseCircleOutlined, PlusSquareOutlined, DeleteOutlined, EditOutlined, CloseOutlined, CheckOutlined} from "@ant-design/icons"
 import { Input } from "antd"
 
 import './css/SideBar.css'
 
-const Sidebar = ({chats, setChats, selectedChat, setSelectedChat}) => {
+const Sidebar = ({chats, setChats, selectedChat, setSelectedChat, user}) => {
 
     const [isCreatingNewChat, setIsCreatingNewChat] = useState(false);
     const [newChatName, setNewChatName] = useState("");
-
 
     const handleNewChat = () => {
         setIsCreatingNewChat(true);
@@ -20,7 +19,7 @@ const Sidebar = ({chats, setChats, selectedChat, setSelectedChat}) => {
             chat_name: newChatName,
             date_creating: new Date().toJSON().substring(0,10),
         };
-        const user_id = 1;
+        const user_id = user.id;
         const type_nn_id = 1;
 
         const create = async () => {
@@ -44,10 +43,10 @@ const Sidebar = ({chats, setChats, selectedChat, setSelectedChat}) => {
                     .then(
                         (data) => {
                           console.log('Data:', data)
-                          setChats(data.data)
+                          setChats(prevChats => prevChats.concat(data.data))
                           setNewChatName("");
                           setIsCreatingNewChat(false);
-                          setSelectedChat(data.data[data.data.length - 1].id);
+                          setSelectedChat(data.data.id);
                     },
                        (error) => console.log(error)  // Установить сообщения об ошибках
                   )
@@ -73,7 +72,7 @@ const Sidebar = ({chats, setChats, selectedChat, setSelectedChat}) => {
     };
 
     const handleDeleteChat = async (e, chatId) => {
-        e.stopPropagation(); // Остановка всплытия события, чтобы клик по кнопке не вызывал обработчик click для родительского элемента
+        e.stopPropagation(); 
         const requestOptions = {
             method: 'DELETE'
         }
@@ -118,18 +117,24 @@ const Sidebar = ({chats, setChats, selectedChat, setSelectedChat}) => {
                 )}
             </div>
             <div className="chat-list">
-                {chats.map((chat) => (
-                    <div key={chat.id} className={`chat-item ${selectedChat === chat.id ? "selected-chat" : ""}`} onClick={() => handleChatClick(chat.id)}>
-                        <div className="chat-item-header">
-                            {chat.chat_name || `Чат ${chat.id}`}
-                            <DeleteOutlined className="delete-chat-button" onClick={(e) => handleDeleteChat(e, chat.id)}/>
-                        </div>
-                        <div style={{display: "flex", flexDirection: "row"}}>
-                            <div className="chat-name">{chat.chat_name}</div>
-                            <div className="chat-createdAt">{new Date(chat.date_creating).toLocaleDateString()}</div>
-                        </div>
-                    </div>
-                ))}
+                { chats ? (
+                    <>
+                        {chats.map((chat) => (
+                            <div key={chat.id} className={`chat-item ${selectedChat === chat.id ? "selected-chat" : ""}`} onClick={() => handleChatClick(chat.id)}>
+                                <div className="chat-item-header">
+                                    {chat.chat_name || `Чат ${chat.id}`}
+                                    <div className="chat-settings-div">
+                                        <DeleteOutlined className="delete-chat-button" onClick={(e) => handleDeleteChat(e, chat.id)}/>
+                                    </div>
+                                </div>
+                                <div style={{display: "flex", flexDirection: "row"}}>
+                                    <div className="chat-name">{chat.chat_name}</div>
+                                    <div className="chat-createdAt">{new Date(chat.date_creating).toLocaleDateString()}</div>
+                                </div>
+                            </div>
+                        ))}
+                    </>
+                ) : ("")}
             </div>
     </div>
     )

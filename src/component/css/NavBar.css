@@ -34,8 +34,8 @@
   }
 
   .lapa-nav-bar2{
-    right: 3.5vh;
-    top: 1.5vh;
+    right: 3vh;
+    top: 1.4vh;
     padding-top: 8.5px;
     padding-bottom: 8.5px;
     padding-left: 9px;
@@ -43,13 +43,4 @@
     background-color: transparent;
   }
 
-  .lapa-nav-bar3{
-    right: 5vh;
-    top: 0.8vh;
-    padding-top: 8.5px;
-    padding-bottom: 8.5px;
-    padding-left: 9px;
-    padding-right: 9px;
-    background-color: transparent;
-  }
 

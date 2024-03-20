@@ -9,7 +9,7 @@ import NavBar from "./NavBar";
 import UserInfo from "./UserInfo";
 
 
-const Home = () => {
+const Home = ({user}) => {
 
     const [chats, setChats] = useState([]);
 
@@ -29,7 +29,7 @@ const Home = () => {
                  /**
                   * отправка GET-запроса на сервер
                 */
-            return await fetch("http://localhost:8000/chats", requestOptions)
+            return await fetch(`http://localhost:8000/chats/user/${!user ? 1 : user.id}`, requestOptions)
                 .then(response => response.json())
                 .then(
                     (data) => {
@@ -48,10 +48,10 @@ const Home = () => {
         <Flex gap="middle" wrap="wrap">
             <Layout >
                 <div className="chats-page">
-                    <NavBar/>
-                    <Sidebar chats={chats} setChats={setChats} selectedChat={selectedChat} setSelectedChat={setSelectedChat}/>
-                    <Chat chats={chats} selectedChat={selectedChat} isColorChanged={isColorChanged}/>
-                    <UserInfo isColorChanged={isColorChanged} setColorChanged={setColorChanged}/>
+                    <NavBar isColorChanged={isColorChanged}/>
+                    <Sidebar chats={chats} setChats={setChats} selectedChat={selectedChat} setSelectedChat={setSelectedChat} user={user}/>
+                    <Chat chats={chats} selectedChat={selectedChat} isColorChanged={isColorChanged} user={user}/>
+                    <UserInfo isColorChanged={isColorChanged} setColorChanged={setColorChanged} user={user}/>
                 </div>
             </Layout>
         </Flex>

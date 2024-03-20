@@ -8,7 +8,7 @@ import useThemeStyles from "./css/useThemeStyles";
 
 let type_nn = [];
 
-const UserInfo = ({isColorChanged, setColorChanged}) => {
+const UserInfo = ({isColorChanged, setColorChanged, user}) => {
     const [isSettings, setIsSettings] = useState(false);
 
     const [isThemeChanged] = useState(localStorage.getItem('isThemeChanged') === false);
@@ -83,8 +83,8 @@ const UserInfo = ({isColorChanged, setColorChanged}) => {
     return(
             <div className="user-info">
                 <div className="user-avatar"><UserAvatar/></div>
-                <div className="user-name">Смирнова Александра</div>
-                <div className="user-email">smirnovaAA@mail.com</div>
+                <div className="user-name">{user.name_user}</div>
+                <div className="user-email">{user.email_user}</div>
                 <div className="line"></div>
                 {isSettings &&
                     <>

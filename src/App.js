@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -9,12 +9,15 @@ import Home from "./component/Home";
 // import Chats from "./component/Chats";
 
 function App() {
+  const [user, setUser] = useState([]);
+
+
   return (
     <div style={{ fontFamily: 'Awenir'}}>
       <Router>
           <Routes>
-            <Route path="/" Component={Login}/>
-            <Route path="/home" Component={Home}/>
+            <Route path="/" element={<Login user={user} setUser={setUser}/>}/>
+            <Route path="/home" element={<Home user={user}/>}/>
           </Routes>
       </Router>
     </div>

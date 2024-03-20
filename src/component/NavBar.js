@@ -4,9 +4,10 @@ import { LogoutOutlined} from "@ant-design/icons"
 import { Avatar } from "antd";
 
 import './css/NavBar.css'
-import avatarChatbot from "../resours/avatar-chatbot-light.png"
+import avatarChatbotLight from "../resours/avatar-chatbot-light.png"
+import avatarChatbotDark from "../resours/avatar-chatbot-dark.png"
 
-const NavBar = () => {
+const NavBar = ({isColorChanged}) => {
     const navigate = useNavigate();
 
     const handleLogout = async () => {
@@ -15,10 +16,9 @@ const NavBar = () => {
 
     return(
         <div className="nav-bar">
-            <div className="logo-tab">Chat bot
-                <Avatar className="lapa-nav-bar1" src={avatarChatbot} size={40}><img src={avatarChatbot}/></Avatar>
-                <Avatar className="lapa-nav-bar2" src={avatarChatbot} size={35}><img src={avatarChatbot}/></Avatar>
-                <Avatar className="lapa-nav-bar3" src={avatarChatbot} size={37}><img src={avatarChatbot}/></Avatar>
+            <div className="logo-tab">Panda-ОS
+                <Avatar className="lapa-nav-bar1" src={isColorChanged ? avatarChatbotDark : avatarChatbotLight} size={40}/>
+                <Avatar className="lapa-nav-bar2" src={isColorChanged ? avatarChatbotDark : avatarChatbotLight} size={40}/>
             </div>
             <div className="logout-tab" onClick={handleLogout}>
                 Выйти <LogoutOutlined />
