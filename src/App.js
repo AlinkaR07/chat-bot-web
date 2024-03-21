@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import {LoadingOutlined} from "@ant-design/icons"
 
 import Login from "./component/Login";
@@ -7,6 +7,7 @@ import Home from "./component/Home";
 
 
 import './App.css'
+import noMessagesImageLight from "./resours/panda-light.png"
 
 
 function App() {
@@ -46,8 +47,11 @@ function App() {
 
   if (loading) {
     return <div className="div-loading">
-              <LoadingOutlined style={{ fontSize: 24, marginRight: 8, color: '#072E70'}} />
-              Loading...
+              <img style={{marginTop: "30px", width: "5vw", height: "10vh"}} src={noMessagesImageLight} alt="No messages" />
+              <div>
+                <LoadingOutlined style={{ fontSize: 24, marginRight: 8, color: '#072E70'}} />
+                Loading...
+              </div>
             </div>;
   }
 
