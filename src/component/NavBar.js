@@ -11,6 +11,7 @@ const NavBar = ({isColorChanged}) => {
     const navigate = useNavigate();
 
     const handleLogout = async () => {
+        localStorage.removeItem('token');
         navigate("/");
     }
 

@@ -12,34 +12,29 @@ import UserInfo from "./UserInfo";
 const Home = ({user}) => {
 
     const [chats, setChats] = useState([]);
-
     const [selectedChat, setSelectedChat] = useState(null);
     const [isColorChanged, setColorChanged] = useState(localStorage.getItem('isColorChanged') === 'true');
 
 
     useEffect(() => {
+        /**
+        * Get-запрос на получение чатов
+        */
         const getChat = async () => {
-                /**
-                  * определение параметров запроса
-                */
             const requestOptions = {
                 method: 'GET'
             }
-
-                 /**
-                  * отправка GET-запроса на сервер
-                */
-            return await fetch(`http://localhost:8000/chats/user/${!user ? 1 : user.id}`, requestOptions)
+            return await fetch(`http://localhost:8000/chats/user/${user.id}`, requestOptions)
                 .then(response => response.json())
-                .then(
-                    (data) => {
-                        console.log('Chats:', data)
-                        setChats(data.data);
-                    },
-                    (error) => {
-                        console.log(error)   // Установить сообщения об ошибках
-                    }
-                )
+                    .then(
+                        (data) => {
+                            console.log('Chats:', data)
+                            setChats(data.data);
+                        },
+                        (error) => {
+                            console.log(error)   // Установить сообщения об ошибках
+                        }
+                    )
         }
         getChat()
     }, [setChats])
