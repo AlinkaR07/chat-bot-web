@@ -18,7 +18,7 @@
     .chat-header{
         color: var(--color1-color);
         font-size: 4vh;
-        font-weight: 700;
+        font-weight: 600;
     }
 
 
@@ -203,8 +203,8 @@
         justify-content: center;
         height: 60vh;
         color: var(--color1-color);
-        font-size: 2.5vh;
-        font-weight: 500;
+        font-size: 4vh;
+        font-weight: 600;
     }
 
     .image-no-messages{
@@ -366,5 +366,14 @@
         }
     }
 
-    
+    .div-loading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        height: 10vh; 
+        width: 10vw;
+        background-color: var(--color2-color);
+        color: var(--colorText-color);
+      }
             

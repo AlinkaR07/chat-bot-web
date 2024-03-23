@@ -8,7 +8,7 @@
     background-color: var(--color3-color);
     color: var(--colorText-color);
     font-size: 2.5vh;
-    font-weight: 500;
+    font-weight: 600;
     border-left: 0.01vw solid black;
     box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
   }
@@ -24,6 +24,7 @@
 
   .user-email{
     font-size: 1.5vh;
+    font-weight: 600;
   }
 
   .line {

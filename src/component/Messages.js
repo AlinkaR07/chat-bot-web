@@ -155,78 +155,78 @@ const Messages = ({ selectedChat, messages, setMessages, isColorChanged, minRows
         }    
     };
 
-    return(
-    <div className="messages">
-    {selectedChat !== null && messages && messages.length > 0 ? (
-        <>
-        {Object.entries(groupMessagesByDate()).map(([date, messages]) => (
-            <div key={date}>
-                <div className="div-date-header-divider">
-                    <hr className="date-divider"/>
-                    <div className="date-header">{getDateText(date)}</div>
-                    <hr className="date-divider"/>
-                </div>
-                {messages.map((message) => (
-                    <div key={message.id}>
-                                { message.status_message_id === 1 ? (
-                                    <div className="massage-div-request">
-                                        <div className="massage-div-request-text-avatar"> 
-                                            <div className="massage-div-request-text">Вы</div>
-                                            <Avatar className="massage-div-request-avatar" size={40}><UserOutlined/></Avatar>
-                                        </div>
+    return( 
+        <div className="messages">
+                {selectedChat !== null && messages && messages.length > 0 ? (
+                    <>
+                    {Object.entries(groupMessagesByDate()).map(([date, messages]) => (
+                        <div key={date}>
+                            <div className="div-date-header-divider">
+                                <hr className="date-divider"/>
+                                <div className="date-header">{getDateText(date)}</div>
+                                <hr className="date-divider"/>
+                            </div>
+                            {messages.map((message) => (
+                                <div key={message.id}>
+                                            { message.status_message_id === 1 ? (
+                                                <div className="massage-div-request">
+                                                    <div className="massage-div-request-text-avatar"> 
+                                                        <div className="massage-div-request-text">Вы</div>
+                                                        <Avatar className="massage-div-request-avatar" size={40}><UserOutlined/></Avatar>
+                                                    </div>
 
-                                        {editingMessage === message.id ? ( 
-                                            <div className="massage-div-edit">
-                                                <CloseOutlined className="close-edit-message-button" onClick={cancelEdit}/>
-                                                <div className="save-edit-message-button" onClick={handleEdit}>Сохранить</div>
-                                                <Input.TextArea className="input-editing" autoSize={{ minRows: minRows, maxRows: 3 }} placeholder="Напишите запрос" value={inputEditingText} onChange={(e) => setInputEditingText(e.target.value)} onKeyDown={handleInputEditingKeyPress}/>
-                                            </div> ) : 
-                                        (
-                                            <div className="massage-div-request-text-avatar"> 
-                                                <EditOutlined className="edit-message-button" onClick={() => setEditingMessage(message.id)}/>
-                                                <div className="message-request">{message.content}</div> 
-                                            </div>
-                                        )}
+                                                    {editingMessage === message.id ? ( 
+                                                        <div className="massage-div-edit">
+                                                            <CloseOutlined className="close-edit-message-button" onClick={cancelEdit}/>
+                                                            <div className="save-edit-message-button" onClick={handleEdit}>Сохранить</div>
+                                                            <Input.TextArea className="input-editing" autoSize={{ minRows: minRows, maxRows: 3 }} placeholder="Напишите запрос" value={inputEditingText} onChange={(e) => setInputEditingText(e.target.value)} onKeyDown={handleInputEditingKeyPress}/>
+                                                        </div> ) : 
+                                                    (
+                                                        <div className="massage-div-request-text-avatar"> 
+                                                            <EditOutlined className="edit-message-button" onClick={() => setEditingMessage(message.id)}/>
+                                                            <div className="message-request">{message.content}</div> 
+                                                        </div>
+                                                    )}
 
-                                        <div className="message-div-request-date-sending"> 
-                                            <div className="date-sending-message-request">{new Date(message.date_sending).toLocaleTimeString()}</div>
-                                        </div>
-                                    </div>
-                                ) : (
-                                    <div className="massage-div-answer">
-                                        <div className="massage-div-answer-text-avatar"> 
-                                            <Avatar className="massage-div-answer-avatar" src={avatarChatbot} size={40}><img src={avatarChatbot} size={20} alt="No messages" /></Avatar>
-                                            <div style={{marginTop: "8px", fontSize: "2.5vh", fontWeight: "bolder"}}>Chat Bot</div>
-                                        </div>
-                                        <div className="message-answer" >{message.content}</div>
-                                        <div className="massage-div-answer-text-avatar">
-                                            <div className="message-div-answer-date-sending"> 
-                                                <div className="date-sending-message-answer">{new Date(message.date_sending).toLocaleTimeString()}</div>
-                                            </div>
-                                            {copiedMessageId === message.id ? ( 
-                                                <CheckOutlined className="confirmation-copy-message"/>) : (
-                                                <>
-                                                    <CopyOutlined className="copy-message-button" onClick={() => copyToClipboard(message.content, message.id)}/>
-                                                </>
+                                                    <div className="message-div-request-date-sending"> 
+                                                        <div className="date-sending-message-request">{new Date(message.date_sending).toLocaleTimeString()}</div>
+                                                    </div>
+                                                </div>
+                                            ) : (
+                                                <div className="massage-div-answer">
+                                                    <div className="massage-div-answer-text-avatar"> 
+                                                        <Avatar className="massage-div-answer-avatar" src={avatarChatbot} size={40}><img src={avatarChatbot} size={20} alt="No messages" /></Avatar>
+                                                        <div style={{marginTop: "8px", fontSize: "2.5vh", fontWeight: "bolder"}}>Chat Bot</div>
+                                                    </div>
+                                                    <div className="message-answer" >{message.content}</div>
+                                                    <div className="massage-div-answer-text-avatar">
+                                                        <div className="message-div-answer-date-sending"> 
+                                                            <div className="date-sending-message-answer">{new Date(message.date_sending).toLocaleTimeString()}</div>
+                                                        </div>
+                                                        {copiedMessageId === message.id ? ( 
+                                                            <CheckOutlined className="confirmation-copy-message"/>) : (
+                                                            <>
+                                                                <CopyOutlined className="copy-message-button" onClick={() => copyToClipboard(message.content, message.id)}/>
+                                                            </>
+                                                        )}
+                                                        <RedoOutlined className="regenerate-message-button"/>
+                                                    </div>
+                                                </div>
                                             )}
-                                            <RedoOutlined className="regenerate-message-button"/>
-                                        </div>
-                                    </div>
-                                )}
+                                </div>
+                                
+                            ))}
+                        </div>
+                    ))}
+                    </>
+                ) : (
+                    <div className="div-image-no-messages">
+                        Чем я могу Вам помочь?
+                        <img style={{marginTop: "30px", width: "10vw", height: "17vh"}} src={isColorChanged ? noMessagesImageDark : noMessagesImageLight} alt="No messages" />
                     </div>
-                    
-                ))}
-            </div>
-        ))}
-        </>
-    ) : (
-        <div className="div-image-no-messages">
-            Чем я могу Вам помочь?
-            <img style={{marginTop: "30px", width: "5vw", height: "10vh"}} src={isColorChanged ? noMessagesImageDark : noMessagesImageLight} alt="No messages" />
+                )}
+        <div id="messagesEndRef" ref={messagesEndRef} />
         </div>
-    )}
-    <div id="messagesEndRef" ref={messagesEndRef} />
-    </div>
     )
 };
 

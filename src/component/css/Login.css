@@ -1,7 +1,8 @@
 /* Login Page */
 
 .login-page {
-    background-image: linear-gradient(#4B7ED6, #174FAD);
+    background-image: linear-gradient(#4B7ED6, #072E70);     /*#020f2e*/
+    color: #072E70;
     position: absolute;
     align-items: center;
     justify-content: center;
@@ -54,5 +55,5 @@
     padding: 1.5vh;
     border-radius: 8px;
     display: inline-block;
-    background-color: #4B7ED6;
+    background-color: #072E70;
   }

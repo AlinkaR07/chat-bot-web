@@ -5,10 +5,11 @@
     padding-left: 1vw;
     padding-bottom: 0.8vh;
     width: 20vw;
+    font-weight: bold;
     background-color: var(--color3-color);
     color: var(--colorText-color);
     font-size: 3.5vh;
-    font-weight: 500;
+    
     border-right: 0.01vw solid black;
     box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
@@ -42,6 +43,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    font-weight: 500;
     color: var(--colorText-color);
     font-size: 2.8vh;
     height: 10vh;
@@ -52,7 +54,7 @@
     border: 0.01vw solid var(--color1-color);
     border-radius: 1.5vh;
     cursor: pointer;
-    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--colorShadow-color);
     transition: background-color 0.3s;
 
     &:hover {

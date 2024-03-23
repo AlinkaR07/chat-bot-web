@@ -56,7 +56,7 @@ function App() {
   }
 
   return (
-    <div style={{ fontFamily: 'Awenir'}}>
+    <div>
       <Router>
           <Routes>
             <Route path="/" element={<Login user={user} setUser={setUser}/>}/>
