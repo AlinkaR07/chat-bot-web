@@ -33,6 +33,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+<<<<<<< HEAD
+=======
+    padding-top: 10vh;
+    padding-left: 1vw;
+    width: 20vw;
+    background-color: var(--color3-color);
+    color: var(--colorText-color);
+    font-size: 2.5vh;
+    font-weight: 600;
+    border-left: 0.01vw solid black;
+    box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
+>>>>>>> 2a1949bc795f4b122bc18afa76bb3fb425da6716
   }
 
   .user-name{
@@ -44,6 +56,17 @@
   .user-email{
     font-size: 1.5vh;
     font-weight: 600;
+<<<<<<< HEAD
+=======
+  }
+
+  .line {
+    margin-top: 10px;
+    margin-bottom: 20vh;
+    width: 15vw;
+    height: 1px;
+    background-color: var(--color1-color);
+>>>>>>> 2a1949bc795f4b122bc18afa76bb3fb425da6716
   }
 
   .button-open-settings{

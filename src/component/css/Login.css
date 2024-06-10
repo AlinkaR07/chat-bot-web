@@ -51,7 +51,11 @@
   }
 
 .login-page {
+<<<<<<< HEAD
     background-image: linear-gradient(25deg, var(--color7-color), var(--color1-color));
+=======
+    background-image: linear-gradient(#4B7ED6, #072E70);     /*#020f2e*/
+>>>>>>> 2a1949bc795f4b122bc18afa76bb3fb425da6716
     color: #072E70;
     position: absolute;
     align-items: center;
@@ -123,6 +127,7 @@
     padding: 1.5vh;
     border-radius: 8px;
     display: inline-block;
+<<<<<<< HEAD
     background-color: transparent;
 
     &:hover {
@@ -410,3 +415,7 @@ transform: rotate(5deg);
 
   
 
+=======
+    background-color: #072E70;
+  }
+>>>>>>> 2a1949bc795f4b122bc18afa76bb3fb425da6716

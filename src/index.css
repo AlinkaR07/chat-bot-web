@@ -1,14 +1,22 @@
 /* Global */
 
 * {
+<<<<<<< HEAD
   font-family: Montserrat, Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+=======
+  font-family: Montserrat,  Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+>>>>>>> 2a1949bc795f4b122bc18afa76bb3fb425da6716
     Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 body {
   margin: 0;
+<<<<<<< HEAD
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+=======
+  font-family: Montserrat,  -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+>>>>>>> 2a1949bc795f4b122bc18afa76bb3fb425da6716
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;

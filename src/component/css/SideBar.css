@@ -5,11 +5,11 @@
     padding-left: 1vw;
     padding-bottom: 0.8vh;
     width: 20vw;
-    height: 100vh;
+    font-weight: bold;
     background-color: var(--color3-color);
     color: var(--colorText-color);
     font-size: 3.5vh;
-    font-weight: 600;
+    
     border-right: 0.01vw solid black;
     box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
     user-select: none;

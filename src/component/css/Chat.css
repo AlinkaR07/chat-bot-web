@@ -25,11 +25,16 @@
 
     .chat-header{
         color: var(--color1-color);
+<<<<<<< HEAD
         font-size: 3vh;
         font-weight: 600;
         width: 80vw;
         margin-right: 2vw;
         text-align: center;
+=======
+        font-size: 4vh;
+        font-weight: 600;
+>>>>>>> 2a1949bc795f4b122bc18afa76bb3fb425da6716
     }
 
     .chat-header-nomessage{
@@ -220,7 +225,10 @@
         color: var(--color1-color);
         font-size: 4vh;
         font-weight: 600;
+<<<<<<< HEAD
         text-align: center;
+=======
+>>>>>>> 2a1949bc795f4b122bc18afa76bb3fb425da6716
     }
 
     .image-no-messages{
@@ -431,15 +439,19 @@
         }
     }
 
+<<<<<<< HEAD
 
     /* Стили сообщения-ответа во время перегенерации и ожидании ответа от LLM*/
 
+=======
+>>>>>>> 2a1949bc795f4b122bc18afa76bb3fb425da6716
     .div-loading {
         display: flex;
         flex-direction: column;
         justify-content: center; 
         align-items: center; 
         height: 10vh; 
+<<<<<<< HEAD
         width: 30vw;
         background-color: var(--color2-color);
         color: var(--colorText-color);
@@ -637,3 +649,10 @@
         display: inline-block;
         animation: typing 2s steps(40, end);
       }
+=======
+        width: 10vw;
+        background-color: var(--color2-color);
+        color: var(--colorText-color);
+      }
+            
+>>>>>>> 2a1949bc795f4b122bc18afa76bb3fb425da6716

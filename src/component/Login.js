@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { LoginOutlined, UserOutlined, EyeInvisibleOutlined, EyeTwoTone, CheckOutlined, CloseOutlined, ArrowLeftOutlined, UserAddOutlined } from "@ant-design/icons";
+=======
+import React, { useState } from "react";
+import { LoginOutlined, UserOutlined, EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
+>>>>>>> 2a1949bc795f4b122bc18afa76bb3fb425da6716
 import { useNavigate } from "react-router-dom";
 import { Input, message, Layout } from 'antd';
 import useThemeStyles from "./css/useThemeStyles"; 
