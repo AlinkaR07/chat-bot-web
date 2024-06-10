@@ -9,6 +9,7 @@
         background-color: var(--color2-color);
         color: black;
         font-size: 2.5vh;
+        user-select: none;
     }
   
     .header{
@@ -18,7 +19,7 @@
     .chat-header{
         color: var(--color1-color);
         font-size: 4vh;
-        font-weight: 700;
+        font-weight: 600;
     }
 
 
@@ -52,6 +53,7 @@
         flex-direction: column;
         margin-bottom: 3vh;
         position: relative;
+        user-select: text;
     }
 
     .massage-div-request-text-avatar{
@@ -65,6 +67,7 @@
         margin-top: 8px;
         font-size: 2.5vh;
         font-weight: bolder;
+        user-select: none;
     }
 
     .massage-div-request-avatar{
@@ -92,7 +95,8 @@
         display: flex;
         flex-direction: row;
         margin-left: auto;
-        margin-right: 4vw;
+        margin-right: 80px;
+        user-select: none;
     }
 
     .date-sending-message-request{
@@ -138,6 +142,7 @@
         flex-direction: column;
         margin-bottom: 3vh;
         position: relative;
+        user-select: text;
     }
 
     .massage-div-answer-text-avatar{
@@ -145,6 +150,7 @@
         flex-direction: row;
         margin-right: auto;
         margin-left: 5px;
+        user-select: none;
     }
 
     .message-div-answer-text{
@@ -184,6 +190,8 @@
         flex-direction: row;
         margin-right: auto;
         margin-left: 45px;
+        user-select: none;
+        position: relative;
     }
 
     .date-sending-message-answer{
@@ -203,8 +211,9 @@
         justify-content: center;
         height: 60vh;
         color: var(--color1-color);
-        font-size: 2.5vh;
-        font-weight: 500;
+        font-size: 4vh;
+        font-weight: 600;
+        text-align: center;
     }
 
     .image-no-messages{
@@ -336,7 +345,8 @@
         color: #072E70;
         position: absolute;
         bottom: 0;
-        left: 8.5vw;
+        left: 100px;
+        padding-left: 50px;
 
         &:hover {
             color: #174FAD;
@@ -349,16 +359,17 @@
         color: #072E70;
         position: absolute;
         bottom: 0;
-        left: 8.5vw;
+        left: 100px;
+        padding-left: 50px;
     }
 
     .regenerate-message-button{
         font-size: 2vh;
         font-weight: bold;
         color: #072E70;
-        position: absolute;
         bottom: 0;
-        left: 9.8vw;
+        padding-top: 5px;
+        padding-left: 5px;
 
         &:hover {
             color: #174FAD;
@@ -366,5 +377,45 @@
         }
     }
 
+
+    .div-loading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        height: 10vh; 
+        width: 10vw;
+        background-color: var(--color2-color);
+        color: var(--colorText-color);
+      }
     
-            
+
+      .message-answer-loading{
+        margin-right: auto;
+        margin-left: 60px;
+        margin-top: 3px;
+        padding: 10px;
+        height: 4.5vh;
+        width: 40vw;
+        font-size: 1.5vh;
+        background-color: var(--color5-color); 
+        border: 2px solid var(--color6-color);
+        border-radius: 0px 7px 7px 7px;
+        word-wrap: break-word;
+        white-space: pre-line;
+        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);       
+        color:#888;
+      }
+
+
+      .loading{
+        display:inline-block;
+        clip-path: inset(0 2ch 0 0);
+        animation: l 1s steps(4) infinite;
+      }
+
+      @keyframes l {
+        to {
+          clip-path: inset(0 -1ch 0 0)
+        }
+      }

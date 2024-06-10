@@ -8,22 +8,31 @@
     background-color: var(--color3-color);
     color: var(--colorText-color);
     font-size: 2.5vh;
-    font-weight: 500;
+    font-weight: 600;
     border-left: 0.01vw solid black;
     box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
+    user-select: none;
   }
 
   .user-avatar {
     padding-left: 8px;
-    padding-top: 7px;
+    padding-top: 3px;
+    padding-bottom: 1px;
     margin-bottom: 1vh;
     margin-top: 1vh;
     background-color: var(--color1-color);
     border-radius: 50%;
   }
 
+  .user-name{
+    font-size: 2.5vh;
+    font-weight: 600;
+    text-align: center;
+  }
+
   .user-email{
     font-size: 1.5vh;
+    font-weight: 600;
   }
 
   .line {
@@ -35,6 +44,7 @@
   }
 
   .button-open-settings{
+    text-align: center;
     margin-top: auto;
     margin-bottom: 3vh;
     cursor: pointer;
@@ -50,13 +60,19 @@
     font-size: 2.2vh;
     font-weight: 500;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   .cascader-models{
     background-color: var(--color1-color);
     border: 2px solid var(--color1-color);
+    font-size: 1.5vh;
+    color: #fff;
+    width: 13vw;
+    height: 4vh;
     border-radius: 3px;
     margin-bottom: 10vh;
+    text-align: center;
   }
 
   .container-switch{

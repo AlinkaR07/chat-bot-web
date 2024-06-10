@@ -11,6 +11,7 @@ const useThemeStyles = (isColorChanged) => {
     document.documentElement.style.setProperty('--color6-color', isColorChanged ? '#070b31' : '#2D4D82');     // цвет границ сообщения-ответа
     document.documentElement.style.setProperty('--colorItemHover-color', isColorChanged ? '#193e74' : '#a6c8ff');    // при наведении курсора на чат
     document.documentElement.style.setProperty('--colorItemMouse-color', isColorChanged ? '#072d65' : '#8bb1ff');    // при выборе чата
+    document.documentElement.style.setProperty('--colorShadow-color', isColorChanged ? '0 0 5px 1px #ccc' : '0 0 5px 3px rgba(0, 0, 0, 0.1)'); // тень у чатов в sidebar
   }, [isColorChanged]);
 };
 

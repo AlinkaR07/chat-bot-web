@@ -1,5 +1,5 @@
 import React, {  useState } from "react";
-import { CloseCircleOutlined, PlusSquareOutlined, DeleteOutlined, EditOutlined, CloseOutlined, CheckOutlined} from "@ant-design/icons"
+import { CloseCircleOutlined, PlusSquareOutlined, DeleteOutlined} from "@ant-design/icons"
 import { Input } from "antd"
 
 import './css/SideBar.css'
