@@ -10,13 +10,18 @@
     "antd": "^5.13.3",
     "antd-img-crop": "^4.21.0",
     "bootstrap": "^5.3.3",
+    "jspdf": "^2.5.1",
     "keycloak-js": "^24.0.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
     "react-dom": "^18.2.0",
+    "react-pdf": "^8.0.0",
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
     "react-simple-typewriter": "^5.0.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-to-print": "^2.15.1",
+    "recharts": "^2.12.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

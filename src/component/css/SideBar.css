@@ -5,39 +5,38 @@
     padding-left: 1vw;
     padding-bottom: 0.8vh;
     width: 20vw;
+    height: 100vh;
     background-color: var(--color3-color);
     color: var(--colorText-color);
     font-size: 3.5vh;
     font-weight: 600;
     border-right: 0.01vw solid black;
     box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
     user-select: none;
-    scrollbar-width: thin; 
 }
-
-      .side-bar::-webkit-scrollbar {
-        width: 1.5px; /* Ширина прокрутки */
-      }
-
-      .side-bar::-webkit-scrollbar-thumb {
-        background-color: var(--color4-color);      /* Цвет ползунка */
-        border-radius: 30px;
-      }
-
-      .side-bar::-webkit-scrollbar-track {
-        background-color: var(--color3-color); /* Цвет трека */
-      }
-
-  .button-cancel-new-chat{
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-
-  .button-new-chat{
-    margin-left: 60%;
+      
+  .chat-list{
+    height: 165vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: 0.5px; 
     margin-top: 1vh;
+    margin-bottom: 10px;
   }
+    .chat-list::-webkit-scrollbar {
+          width: 0.5px; /* Ширина прокрутки */
+    }
+
+    .chat-list::-webkit-scrollbar-thumb {
+          background-color: var(--color1-color);      /* Цвет ползунка */
+          border-radius: 30px;
+    }
+
+    .chat-list::-webkit-scrollbar-track {
+          background-color: var(--color3-color); /* Цвет трека */
+    }
 
   .chat-item{
     display: flex;
@@ -45,14 +44,14 @@
     position: relative;
     font-weight: 500;
     color: var(--colorText-color);
-    font-size: 2.8vh;
-    height: 10vh;
+    font-size: 2.5vh;
     width: 18vw;
     padding: 8px;
-    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 3px;
     background-color: var(--color3-color);
     border: 0.01vw solid var(--color1-color);
-    border-radius: 1.5vh;
+    border-radius: 1vh;
     cursor: pointer;
     box-shadow: var(--colorShadow-color);
     transition: background-color 0.3s;
@@ -70,14 +69,14 @@
     display: flex;
     flex-direction: column;
     color: var(--colorText-color);
-    font-size: 2.8vh;
-    height: 10vh;
+    font-weight: 500;
+    font-size: 2.5vh;
     width: 18vw;
     padding: 8px;
-    margin-top: 20px;
+    margin-bottom: 20px;
     background-color: var(--colorItemMouse-color);
     border: 0.01vw solid var(--color1-color);
-    border-radius: 1.5vh;
+    border-radius: 1vh;
     cursor: pointer;
     box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
@@ -95,12 +94,21 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 5px;
+    padding-left: 1vw;
+    width: 13vw;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   .chat-settings-div{
     display: flex;
     flex-direction: row;
+  }
+
+  .date-group-chats{
+    font-size: 1.7vh;
+    margin-bottom: 1vh;
+    color: #888;
   }
 
   .delete-chat-button{
@@ -110,9 +118,38 @@
     display: none;
     bottom: 6vh;
     left: 16vw;
+    user-select: none;
 
     &:hover {
       color: rgb(145, 60, 60);
+    }
+  }
+
+  .edit-chat-button{
+    font-size: 2vh;
+    padding-right: 5px;
+    position: absolute;
+    display: none;
+    bottom: 6vh;
+    left: 14.5vw;
+    user-select: none;
+
+    &:hover {
+      color: var(--color4-color);
+    }
+  }
+
+  .save-edit-chat-button{
+    font-size: 2vh;
+    padding-right: 5px;
+    position: absolute;
+    bottom: 6vh;
+    left: 14.5vw;
+    user-select: none;
+    z-index: 10;
+
+    &:hover {
+      color: var(--color4-color);
     }
   }
 
@@ -126,14 +163,168 @@
 
   .chat-name{
     width: 11vw;
-    padding-left: 1vw;
-    padding-top: 1vh;
-    font-size: 1.8vh;
+    padding-left: 1.5vw;
+    padding-top: 1.5vh;
+    font-size: 1.5vh;
+    white-space: nowrap;
   }
 
   .chat-createdAt{
-    font-size: 1.2vh;
+    font-size: 1.1vh;
     color: #888;
-    width: 6.5vw;
+    margin-right: auto;
+    margin-left: 3.5vw;
     padding-top: 3vh;
   }
+
+  .line-header {
+    margin-top: 2vh;
+    width: 18vw;
+    height: 1.8px;
+    background-color: var(--colorText-color);
+  }
+
+  .div-create-new{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    user-select: none;
+  }
+
+  .button-new-chat{
+    margin-top: 1vh;
+    margin-right: 15px;
+    font-size: 2.5vh;
+    border: 0.2vw solid var(--colorText-color);
+    border-radius: 1.1vh;
+    padding: 2px;
+  }
+
+  .button-search{
+    margin-top: 1vh;
+    font-size: 3.3vh;
+  }
+
+  .close-search{
+    margin-top: 1vh;
+    font-size: 3.3vh;
+  }
+
+  .chaty{
+    margin-right: auto;
+    margin-left: 15px;
+  }
+
+  .search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-bar-input{
+    width: 18vw;
+    border: 2px solid var(--color1-color);
+    border-radius: 1vh;
+    margin-top: 2vh;
+    margin-left: -1.2vh;
+  }
+
+
+  .chat-item-admin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-weight: 500;
+    color: var(--colorText-color);
+    font-size: 2.5vh;
+    height: 5vh;
+    width: 16vw;
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 1vw;
+    background-color: var(--color3-color);
+    border: 0.01vw solid var(--color1-color);
+    border-radius: 1vh;
+    cursor: pointer;
+    box-shadow: var(--colorShadow-color);
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: var(--colorItemHover-color);
+    }
+
+    &:active {
+      background-color: var(--colorItemMouse-color);
+    }
+  }
+
+  .selected-chat-admin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-weight: 500;
+    color: var(--colorText-color);
+    font-size: 2.5vh;
+    height: 5vh;
+    width: 16vw;
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 1vw;
+    background-color: var(--colorItemMouse-color);
+    border: 0.01vw solid var(--color1-color);
+    border-radius: 1vh;
+    cursor: pointer;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: var(--colorItemHover-color);
+    }
+
+    &:active {
+      background-color: var(--colorItemMouse-color);
+    }
+  }
+
+  .chat-list-admin{
+    height: 160vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin; 
+    margin-top: 1vh;
+    margin-bottom: 10px;
+  }
+
+        .chat-list::-webkit-scrollbar {
+          width: 0.5px; /* Ширина прокрутки */
+        }
+
+        .chat-list::-webkit-scrollbar-thumb {
+          background-color: var(--color1-color);      /* Цвет ползунка */
+          border-radius: 30px;
+        }
+
+        .chat-list::-webkit-scrollbar-track {
+          background-color: var(--color3-color); /* Цвет трека */
+        }
+
+        .input-edit-chat {
+          background-color: transparent;
+          font-size: 1.7vh;
+        }
+
+        .input-edit-chat:focus {
+          background-color: transparent;
+        }
+
+        .input-edit-chat:hover {
+          background-color: transparent;
+        }
+  

@@ -5,9 +5,29 @@
     justify-content: center;
     border: 0;
     background: none;
+    width: 5px; /* Новая ширина */
+    height: 10px; /* Новая высота */
 }
 
 .upload-text{
     color: #ffffff;
-    font-size: 1vh;
+    font-size: 1.5vh;
 }
+
+.upload{
+    background-color: aqua;
+    height: 10vh;
+    width: 3vw;
+    border-color: aquamarine;
+}
+
+
+.ant-upload {
+    width: 300px;
+    height: 300px;
+}
+
+.custom-upload .ant-upload {
+    width: 200px;
+    height: 20px;
+  }

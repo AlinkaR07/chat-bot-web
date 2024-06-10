@@ -1,7 +1,57 @@
 /* Login Page */
+  .ant-message {
+    user-select: none;
+  }
+
+  .login-container {
+    position: relative;
+  }
+  
+  .logo {
+    position: absolute;
+    width: 10vw;
+    height: 17vh;
+    top: 15.6vh; 
+    left: 30.5vw;
+    margin-right: 5vw; 
+    z-index: 1; 
+  }
+
+  .name-app{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    color: var(--color2-color);
+    font-size: 7vh;
+    font-weight: 800;
+    top: 13.2vh; 
+    left: 50vw;
+    margin-right: 5vw; 
+    z-index: 1;
+  }
+
+  
+  .logo-lapa1 {
+    position: absolute;
+    width: 1.5vw;
+    top: 30vh; 
+    left: 39vw;
+    margin-right: 5vw; 
+    z-index: 1; 
+  }
+
+  .logo-lapa2 {
+    position: absolute;
+    width: 1.5vw;
+    top: 30vh; 
+    left: 31vw;
+    margin-right: 5vw; 
+    z-index: 1; 
+    transform: rotate(-45deg);
+  }
 
 .login-page {
-    background-image: linear-gradient(#4B7ED6, #072E70);
+    background-image: linear-gradient(25deg, var(--color7-color), var(--color1-color));
     color: #072E70;
     position: absolute;
     align-items: center;
@@ -10,6 +60,7 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
+    user-select: none;
   }
   
   .login-card {
@@ -17,14 +68,14 @@
     justify-content: center;
     position: relative;
     top: 20vh;
-    left: 30vw;
+    left: 29vw;
     padding-top: 7vh;
     padding-bottom: 2vh;
     padding-left: 5vw;
     padding-right: 5vw;
-    width: 30vw;
+    width: 32vw;
     text-align: center;
-    background-color: white;
+    background-color: var(--color2-color);
     border-radius: 22px;
     display: grid;
   }
@@ -42,6 +93,7 @@
     width: 30vw;
     padding: 5px;
     margin: 2vh;
+    margin-bottom: 1vh;
     border-radius: 8px;
   }
   
@@ -51,9 +103,310 @@
     margin-left: 2vh;
     margin-right: 2vh;
     margin-top: 3vh;
-    width: 28.2vw;
+    width: 28.8vw;
     padding: 1.5vh;
     border-radius: 8px;
+    font-size: 1.7vh;
     display: inline-block;
     background-color: #072E70;
   }
+
+  .forgot-password-register{
+    margin-top: 2vh;
+    font-size: 1.5vh;
+    font-weight: 500;
+    cursor: pointer;
+    color: #072E70;
+    margin-right: auto;
+    margin-left: 1vw;
+    width: 23%;
+    padding: 1.5vh;
+    border-radius: 8px;
+    display: inline-block;
+    background-color: transparent;
+
+    &:hover {
+      color: var(--color4-color);
+    }
+  }
+
+  .forgot-password{
+    margin-top: 2vh;
+    font-size: 1.5vh;
+    font-weight: 500;
+    cursor: pointer;
+    color: #072E70;
+    width: 30%;
+    text-decoration: underline;
+    margin-left: auto;
+    margin-right: 1vw;
+
+    &:hover {
+      color: var(--color4-color);
+    }
+  }
+
+  .div-button-login-register{
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    align-items: center;
+  }
+
+  .button-login-email{
+    cursor: pointer;
+  }
+
+.login-container{
+  position: relative;
+}
+
+.return-to{
+  margin-top: 2vh;
+  font-size: 1.5vh;
+  font-weight: 500;
+  cursor: pointer;
+  color: #072E70;
+  margin-bottom: 1vh;
+
+  &:hover {
+    color: var(--color4-color);
+  }
+}
+
+.paw-track1 {
+    position: fixed;
+    bottom: 0;
+    left: 3vw;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    padding: 14vh 0; 
+}
+
+.paw1 {
+    width: 1.3vw;
+    height: auto;
+    transform: rotate(30deg);
+}
+
+.paw-track2 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around; 
+  align-items: center; 
+  padding: 16vh 0; 
+}
+
+.paw2 {
+  width: 1.3vw;
+  height: auto;
+  transform: rotate(30deg);
+}
+
+.paw-track3 {
+  position: fixed;
+  bottom: 0;
+  left: 9vw;
+  display: flex;
+  justify-content: space-around; 
+  align-items: center; 
+  padding: 18vh 0; 
+}
+
+.paw3 {
+  width: 1.3vw;
+  height: auto;
+  transform: rotate(30deg);
+}
+
+.paw-track4 {
+position: fixed;
+bottom: 0;
+left: 6vw;
+display: flex;
+justify-content: space-around; 
+align-items: center; 
+padding: 20vh 0; 
+}
+
+.paw4 {
+width: 1.3vw;
+height: auto;
+transform: rotate(30deg);
+}
+
+.paw-track5 {
+  position: fixed;
+  bottom: 0;
+  left: 14vw;
+  display: flex;
+  justify-content: space-around; 
+  align-items: center; 
+  padding: 22vh 0; 
+}
+
+.paw5 {
+  width: 1.3vw;
+  height: auto;
+  transform: rotate(15deg);
+}
+
+.paw-track6 {
+position: fixed;
+bottom: 0;
+left: 11vw;
+display: flex;
+justify-content: space-around; 
+align-items: center; 
+padding: 24vh 0; 
+}
+
+.paw6 {
+width: 1.3vw;
+height: auto;
+transform: rotate(15deg);
+}
+
+.paw-track7 {
+position: fixed;
+bottom: 0;
+left: 19vw;
+display: flex;
+justify-content: space-around; 
+align-items: center; 
+padding: 26vh 0;
+}
+
+.paw7 {
+width: 1.3vw;
+height: auto;
+transform: rotate(15deg);
+}
+
+.paw-track8 {
+position: fixed;
+bottom: 0;
+left: 16vw;
+display: flex;
+justify-content: space-around; 
+align-items: center; 
+padding: 28vh 0; 
+}
+
+.paw8 {
+width: 1.3vw;
+height: auto;
+transform: rotate(15deg);
+}
+
+.paw-track9 {
+  position: fixed;
+  bottom: 0;
+  left: 23vw;
+  display: flex;
+  justify-content: space-around; 
+  align-items: center; 
+  padding: 33vh 0; 
+}
+
+.paw9 {
+  width: 1.3vw;
+  height: auto;
+  transform: rotate(5deg);
+}
+
+.paw-track10 {
+position: fixed;
+bottom: 0;
+left: 20vw;
+display: flex;
+justify-content: space-around;
+align-items: center; 
+padding: 35vh 0; 
+}
+
+.paw10 {
+width: 1.3vw;
+height: auto;
+transform: rotate(5deg);
+}
+
+.paw-track11 {
+position: fixed;
+bottom: 0;
+left: 27vw;
+display: flex;
+justify-content: space-around; 
+align-items: center; 
+padding: 39vh 0; 
+}
+
+.paw11 {
+width: 1.3vw;
+height: auto;
+transform: rotate(5deg);
+}
+
+.paw-track12 {
+position: fixed;
+bottom: 0;
+left: 24vw;
+display: flex;
+justify-content: space-around; 
+align-items: center; 
+padding: 41vh 0; 
+}
+
+.paw12 {
+width: 1.3vw;
+height: auto;
+transform: rotate(5deg);
+}
+
+.paw-track13 {
+  position: fixed;
+  bottom: 0;
+  left: 27vw;
+  display: flex;
+  justify-content: space-around; 
+  align-items: center; 
+  padding: 47vh 0; 
+  }
+  
+  .paw13 {
+  width: 1.3vw;
+  height: auto;
+  transform: rotate(10deg);
+  }
+
+  .error-valid-password{
+    margin-right: auto;
+    font-size: 1.3vh;
+    margin-left: 2vw;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    color: black;
+  }
+
+  .lenght-valid{
+    margin-right: auto;
+    font-size: 1.3vh;
+    margin-left: 1.5vw;
+    color: green;
+  }
+
+  .lenght-novalid{
+    margin-right: auto;
+    font-size: 1.3vh;
+    margin-left: 1.5vw;
+    color: red;
+  }
+
+ 
+
+  
+

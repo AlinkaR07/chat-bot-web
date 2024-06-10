@@ -1,15 +1,14 @@
-  .info-user{
+.info-admin-user{
     height: 25vh;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .info{
+  .info-admin{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
     background-color: transparent;
     width: 20vw;
     margin-top: 2vh;
@@ -18,35 +17,43 @@
     user-select: none;
   }
 
-  .avatar{
+  /* .user-avatar {
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    background-color: var(--color1-color);
+    border-radius: 50%;
+  } */
+
+  .avatar-admin{
     color: #fff;
     background-color: var(--color1-color);
     height: 5vh;
     width: 5vh;
-    font-size: 2vh;
+    font-size: 3vh;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .name{
+  .name-admin{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .user-name{
+  .user-name-admin{
     font-size: 2.3vh;
     font-weight: 600;
     text-align: center;
   }
 
-  .user-email{
+  .user-email-admin{
     font-size: 1.5vh;
     font-weight: 600;
   }
 
-  .button-open-settings{
+  .button-open-settings-admin{
     text-align: center;
     margin-left: auto;
     margin-right: 2vw;
@@ -63,17 +70,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 3vh;
   }
 
-  .div-tema-modal{
+  .div-tema{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 3vw;
+    gap: 2vw;
     padding-left: 1vh;
-    justify-content: center;
-    margin-bottom: 2vh;
+    height: 2vh;
     margin-top: 2vh;
   }
 
@@ -81,60 +86,32 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 2vw;
     padding-left: 1vh;
   }
 
-  .settings-model-modal{
-    font-weight: 550;
-    text-align: left;
-    font-size: 1.7vh;
-    margin-right: auto;
-  }
-
-  .settings-button-modal{
-    margin-top: 1vh;
-    color: white;
-    font-size: 1.5vh;
-    margin-right: 1.5vw;
-    width: 5vw;
-    height: 3vh;
-    text-align: center;
-    padding: 2px;
-  }
-
-  .settings-model-modal-value{
-    font-size: 1.5vh;
-    margin-right: 1.7vw;
-  }
-
-  .settings-raz{
+  .settings-model{
     font-weight: 600;
-    font-size: 1.7vh;
     text-align: left;
-    display: flex;
-    flex-direction: row;
-    gap: 1vw;
-    align-items: center;
-    padding-left: 1vh;
   }
 
-  .container-switch-modal{
+  .container-switch{
     display: flex;
     width: 5%;
-    height: 2;
+    height: 3;
     background-color: #120227;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 3.5vw;
+    margin-top: 20px;
   }
 
   /* The switch - the box around the slider */
-  .switch-modal-user {
+  .switch {
     position: relative;
     display: inline-block;
-    width: 2vw;
-    height: 2.7vh;
+    width: 2.4vw;
+    height: 2.9vh;
   }
   
   /* Hide default HTML checkbox */
@@ -191,9 +168,10 @@
     background: white url('https://i.ibb.co/FxzBYR9/night.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 95%;
+    background-size: 90%;
   }
   
+  /* Rounded sliders */
   .slider.round {
     border-radius: 5vh;
   }
@@ -208,124 +186,9 @@
     color: var(--colorText-color);
     font-size: 2vh;
     font-weight: 500;
+    /* border: 0.15vw solid var(--color1-color);
+    border-radius: 1.5vh; */
     margin-top: 20px;
 }
-
-.line-header-settings{
-    margin-bottom: 2vh;
-    height: 1.8px;
-    background-color: #5f5e5e;
-}
-
-.line-header-tabs{
-    margin-right: 1vw;
-    height: 1px;
-    background-color: #ccc;
-}
-
-.userinfo-settings-modal{
-  display: flex;
-  flex-direction: column;
-  gap: 1vh;
-  margin-top: 1.5vh;
-  justify-content: center;
-}
-
-.user-name-modal{
-  font-size: 1.7vh;
-  font-weight: 550;
-  display: flex;
-  flex-direction: row;
-  color: var(--color1-color);
-  margin-top: 0.5vh;
-  align-items: center;
-  padding-left: 1vh;
-}
-
-.user-chat-modal{
-  font-size: 1.7vh;
-  font-weight: 550;
-  display: flex;
-  flex-direction: row;
-  color: var(--color1-color);
-  margin-top: 0.5vh;
-  align-items: center;
-  padding-left: 1vh;
-}
-
-.user-date-chat-modal{
-  font-size: 1.4vh;
-  font-weight: 500;
-  display: flex;
-  flex-direction: row;
-  color: black;
-  margin-top: 0.5vh;
-  align-items: center;
-  padding-left: 3vh;
-}
-
-.user-name-value{
-  font-size: 1.65vh;
-  color: black;
-  font-weight: 450;
-  margin-left: 0.8vw;
-}
-
-.date-chat-value{
-  font-size: 1.4vh;
-  color: black;
-  font-weight: 450;
-  margin-left: 0.8vw;
-}
-
-.user-chat-value{
-  font-size: 1.65vh;
-  color: black;
-  font-weight: 450;
-  margin-left: 0.8vw;
-}
-
-.user-email-value{
-  font-size: 1.65vh;
-  color: black;
-  font-weight: 450;
-  text-decoration: underline;
-  cursor: pointer;
-  margin-left: 0.8vw;
-}
-
-.user-name-raz{
-  font-size: 1.7vh;
-  font-weight: 400;
-  display: flex;
-  flex-direction: row;
-  gap: 1vw;
-  color: black;
-  margin-bottom: 0.5vh;
-  margin-top: 0.5vh;
-  align-items: center;
-  padding-left: 1vh;
-}
-
-.user-email-raz{
-  display: flex;
-  font-size: 1.7vh;
-  color: var(--color1-color);
-  font-weight: 550;
-  width: 50%;
-  margin-left: 7vw;
-  text-align: center;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.icon{
-  font-size: 1.2vh;
-  margin-right: 0.2vw;
-  text-align: center;
-}
-
-.date-user-chat-value{
-  font-size: 1.3vh;
-  margin-left: 9vw;
-}
+     
+  

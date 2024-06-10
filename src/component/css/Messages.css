@@ -1,0 +1,59 @@
+.search-ovarlay{
+    position: fixed;
+    top: 11vh;
+    right: 0.5vw;
+    z-Index: 9999;
+    pointer-events: none;
+    user-select: none;
+}
+
+.div-overlay{
+    position: relative;
+    background-color: #ffffff;
+    width: 16vw;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
+    pointer-events: auto;
+    margin: 1vh;
+}
+
+.title-overlay{
+    display: flex;
+    flex-direction: row;
+    margin-left: 3%;
+    width: 94%;
+    font-size: 1.5vh;
+    font-weight: 600;
+    margin-bottom: 1vh;
+}
+
+.closeoutlined-overlay{
+    margin-left: auto;
+
+    &:hover {
+        color: var(--color4-color);
+    }
+}
+
+.input-overlay-wrapper{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1vh;
+    align-items: center;
+    gap: 0.4vw;
+}
+
+.input-overlay{
+    margin-left: 3%;
+    width: 94%;
+    height: 3.5vh;
+    padding: 8px;
+    border-radius: 1vh;
+    border: 2px solid var(--color1-color);
+}
+
+.checkbox-overlay{
+    font-size: 1.4vh;
+    margin-left: 5%;
+}

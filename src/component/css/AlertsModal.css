@@ -1,0 +1,134 @@
+.div-modal-alerts{
+  position: fixed;
+  top: 4vh;
+  right: 11vw;
+  z-Index: 9999;
+  pointer-events: none;
+  user-select: none;
+}
+
+.div-modal-alert{
+  position: relative;
+  background-color: #ffffff;
+  width: 19vw;
+  max-height: 30vh;
+  padding: 20px;
+  border-radius: 1vh;
+  box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.1);
+  pointer-events: auto;
+  margin: 1vh;
+}
+
+.title-modal-alerts{
+  display: flex;
+  flex-direction: row;
+  margin-left: 3%;
+  width: 94%;
+  font-size: 1.7vh;
+  font-weight: 600;
+  margin-bottom: 1vh;
+  color: var(--color1-color);
+}
+
+.alert-admin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    font-weight: 500;
+    color: var(--colorText-color);
+    font-size: 1.5vh;
+    height: 5vh;
+    width: 30vw;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: var(--colorItemHover-color);
+    }
+
+    &:active {
+      background-color: var(--colorItemMouse-color);
+    }
+  }
+
+.alert-admin-reading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    font-weight: 500;
+    color: var(--colorText-color);
+    font-size: 1.5vh;
+    height: 5vh;
+    width: 30vw;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+  .date-user-alert{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .date-alert{
+    color: black;
+    font-size: 1vh;
+    margin-left: 14vw;
+  }
+
+  .alert-list-admin{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 1vh;
+    margin-bottom: 10px;
+    max-height: 25vh;
+  }
+
+        .alert-list-admin::-webkit-scrollbar {
+          width: 2px; /* Ширина прокрутки */
+        }
+
+        .alert-list-admin::-webkit-scrollbar-thumb {
+          background-color: var(--color1-color);      /* Цвет ползунка */
+          border-radius: 30px;
+        }
+
+        .alert-list-admin::-webkit-scrollbar-track {
+          background-color: var(--color3-color); /* Цвет трека */
+        }
+
+  .alert-group{
+    margin-top: 0.5vh;
+  }
+  
+  .alert-group-title{
+    color: #a09f9f;
+    font-size: 1.4vh;
+    font-weight: 500;
+    margin-bottom: 0.5vh;
+  }
+
+  .user-name-alert{
+    color: var(--color1-color);
+    width: 15vw;
+    word-wrap: break-word;
+  }
+
+  .user-name-alert-reading{
+    color: black;
+    width: 15vw;
+    word-wrap: break-word;
+  }
+
+  .icon-reading{
+    color: var(--color1-color);
+    margin-right: 0.5vw;
+    font-size: 1.3vh;
+    font-weight: 500;
+  }

@@ -1,0 +1,125 @@
+.new-chat-modal{
+    left: 9.5vw;
+    user-select: none;
+}
+
+.settings-model{
+    font-size: 1.7vh;
+    font-weight:500;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.settings-model-1{
+  font-size: 1.2vh;
+  font-weight: 400;
+  margin-left: 0.5vw;
+  margin-bottom: 1.5vh;
+  text-align: left;
+  color: #ccc;
+}
+
+.name-chat{
+    margin-right: auto;
+    width: 30vw;
+    height: 4vh;
+    margin-bottom: 0.5vh;
+    border: 2px solid var(--color1-color);
+    border-radius: 1.2vh;
+}
+
+.name-chat:hover {
+    border-color: var(--colorItemHover-color); /* Задаем цвет границы при наведении курсора */
+}
+
+.cascader-models{
+    border: 2px solid var(--color1-color);
+    font-size: 2vh;
+    font-weight: 600;
+    color: var(--color1-color);
+    width: 25vw;
+    height: 4vh;
+    border-radius: 1.2vh;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .cascader-models:hover {
+    border-color: var(--colorItemHover-color); /* Задаем цвет границы при наведении курсора */
+}
+
+.new-user{
+    margin-right: auto;
+    margin-left: 1.5vw;
+    width: 25vw;
+    height: 4vh;
+    border: 2px solid var(--color1-color);
+    border-radius: 1.2vh;
+}
+
+.new-model-user{
+    font-size: 1.7vh;
+    font-weight:600;
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+    margin-left: 1.5vw;
+}
+
+.cascader-models-status-user{
+    border: 2px solid var(--color1-color);
+    font-size: 1.8vh;
+    font-weight: 600;
+    color: var(--color1-color);
+    width: 25vw;
+    height: 4vh;
+    border-radius: 1.2vh;
+    margin-bottom: 2vh;
+    margin-left: 1.5vw;
+    text-align: center;
+  }
+
+
+  .cascader-models-status-user-edit{
+    border: 2px solid var(--color1-color);
+    font-size: 2vh;
+    font-weight: 600;
+    color: var(--color1-color);
+    width: 25vw;
+    height: 4vh;
+    border-radius: 1.2vh;
+    margin-left: 1.5vw;
+    text-align: center;
+  }
+
+  .edit-model-user-password{
+    font-size: 1.9vh;
+    font-weight:600;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    margin-left: 1.5vw;
+  }
+
+  .div-password{
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+  }
+
+  .switch-password{
+    margin-top: 3.5vh;
+  }
+
+  .errorValid{
+    color: red;
+    font-size: 1.3vh;
+    margin-top: 0.5vh;
+    margin-left: 2.5vw;
+  }
+
+  .errorName{
+    color: red;
+    font-size: 1.3vh;
+    margin-left: 0.5vw;
+    margin-bottom: 1.5vh;
+  }

@@ -10,6 +10,7 @@ import avatarChatbotDark from "../resours/avatar-chatbot-dark.png"
 const NavBar = ({isColorChanged}) => {
     const navigate = useNavigate();
 
+
     const handleLogout = async () => {
         localStorage.removeItem('token');
         navigate("/");

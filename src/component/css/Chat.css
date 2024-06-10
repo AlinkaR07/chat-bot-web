@@ -3,37 +3,55 @@
         flex-direction: column;
         align-items: center;
         padding-top: 10vh;
-        padding-left: 1vw;
         margin-left: 20px;
-        width: 60vw;
+        width: 80vw;
         background-color: var(--color2-color);
         color: black;
         font-size: 2.5vh;
         user-select: none;
     }
   
+
+    /* Стили заголовка*/
+
     .header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         height: 5vh;
+        width: 80vw;
     }
 
     .chat-header{
         color: var(--color1-color);
-        font-size: 4vh;
+        font-size: 3vh;
         font-weight: 600;
+        width: 80vw;
+        margin-right: 2vw;
+        text-align: center;
     }
 
+    .chat-header-nomessage{
+        color: var(--color1-color);
+        font-size: 4vh;
+        font-weight: 600;
+        width: 60.5vw;
+        text-align: center;
+    }
 
-
+    /* Стили div для всех сообщений*/
 
     .messages{
-        height: 80vh;
-        width: 55vw;
+        padding-right: 2vw;
+        height: 90vh;
+        width: 75vw;
         overflow-y: auto;
-        scrollbar-width: thin; 
+        scrollbar-width: 5px; 
     }
 
       .messages::-webkit-scrollbar {
-        width: 3px; /* Ширина прокрутки */
+        width: 5px;                                 /* Ширина прокрутки */
       }
 
       .messages::-webkit-scrollbar-thumb {
@@ -42,11 +60,11 @@
       }
 
       .messages::-webkit-scrollbar-track {
-        background-color: var(--color2-color); /* Цвет трека */
+        background-color: var(--color2-color);      /* Цвет трека */
       }
 
 
-
+    /* Стили сообщений-запросов*/
 
     .massage-div-request{
         display: flex;
@@ -65,7 +83,7 @@
 
     .massage-div-request-text{
         margin-top: 8px;
-        font-size: 2.5vh;
+        font-size: 2.2vh;
         font-weight: bolder;
         user-select: none;
     }
@@ -78,11 +96,11 @@
     
     .message-request {
         margin-left: auto;
-        margin-right: 60px;
+        margin-right: 80px;
         margin-top: 3px;
         padding: 7px;
-        width: 40vw;
-        font-size: 2vh;
+        width: 50vw;
+        font-size: 1.9vh;
         background-color: var(--color5-color); 
         border: 2px solid #4a4a4a;
         border-radius: 7px 0px 7px 7px;
@@ -104,8 +122,11 @@
         color: #888;
         width: 6.5vw;
         padding-top: 1vh;
-        padding-left: 2.5vw;
+        padding-left: 15px;
     }
+
+
+    /* Стили надписи про дату сообщений*/
 
     .div-date-header-divider{
         display: flex; 
@@ -133,9 +154,12 @@
         border: 1px solid #ccc;
         margin: 5px 10px;
         height: 0.5px;
-        width: 23vw;
+        width: 33vw;
         border-color: var(--color1-color);
     }
+
+
+    /* Стили сообщений-ответов*/
 
     .massage-div-answer{
         display: flex;
@@ -149,13 +173,13 @@
         display: flex; 
         flex-direction: row;
         margin-right: auto;
-        margin-left: 5px;
+        margin-left: 20px;
         user-select: none;
     }
 
     .message-div-answer-text{
         margin-top: 8px; 
-        font-size: 2.5vh; 
+        font-size: 2.2; 
         font-weight: bolder;
     }
 
@@ -169,14 +193,13 @@
         background-color: #6d6b6b50;
     }
         
-  
     .message-answer{
         margin-right: auto;
-        margin-left: 60px;
+        margin-left: 70px;
         margin-top: 3px;
         padding: 7px;
-        width: 40vw;
-        font-size: 2vh;
+        width: 50vw;
+        font-size: 1.9vh;
         background-color: var(--color5-color); 
         border: 2px solid var(--color6-color);
         border-radius: 0px 7px 7px 7px;
@@ -185,24 +208,8 @@
         box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
     }
 
-    .message-div-answer-date-sending{
-        display: flex;
-        flex-direction: row;
-        margin-right: auto;
-        margin-left: 45px;
-        user-select: none;
-        position: relative;
-    }
 
-    .date-sending-message-answer{
-        font-size: 1.2vh;
-        color: #888;
-        width: 6.5vw;
-        padding-top: 1vh;
-        padding-left: 2.5vw;
-    }
-
-    
+    /* Стили div всех сообщений, когда у чата нет ни одного сообщения*/
 
     .div-image-no-messages{
         display: flex;
@@ -223,15 +230,17 @@
     }
 
 
+    /* Стили input для отправки сообщения-запроса*/
 
     .input-request{
         display: flex;
-        gap: 10px;
-        height: 15vh;
-        width: 40vw;
+        gap: 15px;
+        height: 10vh;
+        width: 55vw;
         align-items: center;
         justify-content: center;
-        margin-top: 2vh;
+        margin-top: 0.5vh;
+        margin-bottom: 2vh;
         background-color: var(--color2-color);
     }
     
@@ -246,7 +255,7 @@
     }
     
               .input::-webkit-scrollbar {
-                width: 4px; /* Ширина прокрутки */
+                width: 4px;                                 /* Ширина прокрутки */
               }
     
               .input::-webkit-scrollbar-thumb {
@@ -255,13 +264,16 @@
               }
     
               .input::-webkit-scrollbar-track {
-                background-color: var(--color3-color); /* Цвет трека */
+                background-color: var(--color3-color);      /* Цвет трека */
               }
     
     .send-outlined{
         color: var(--color1-color);
         font-size: 25px;
     }
+
+
+    /* Стили редактирования сообщения-запроса*/
 
     .massage-div-edit{
         display: flex; 
@@ -278,7 +290,7 @@
         margin-left: auto;
         margin-right: 60px;
         padding: 7px;
-        width: 40vw;
+        width: 50vw;
         font-size: 2vh;
         background-color: var(--color5-color); 
         border: 2px solid #4a4a4a;
@@ -289,13 +301,10 @@
     }
 
     .edit-message-button{
-        position: absolute;
         display: none;
-        bottom: 0;
-        right: 8vw;
-        font-size: 2vh;
-        color: #072E70;
-        margin-right: 10px;
+        font-size: 1.8vh;
+        color: var(--color1-color);
+        padding-top: 0.6vh;
 
         &:hover {
             color: #174FAD;
@@ -303,12 +312,39 @@
     }
 
     .massage-div-request:hover .edit-message-button {
-        display: block; /* Показывать кнопку при наведении на div */
+        display: block;                                 /* Показывать кнопку при наведении на div */
+    }
+
+    .copy-message-button-request{
+        display: none;
+        font-size: 1.6vh;
+        color: var(--color1-color);
+        padding-top: 0.6vh;
+
+        &:hover {
+            color: #174FAD;
+            cursor: pointer;
+        }
+    }
+
+    .massage-div-request:hover .copy-message-button-request {
+        display: block;                                 /* Показывать кнопку при наведении на div */
+    }
+
+    .confirmation-copy-message-request{
+        display: none;
+        font-size: 1.6vh;
+        color: var(--color1-color);
+        padding-top: 0.6vh;
+    }
+
+    .massage-div-request:hover .confirmation-copy-message-request {
+        display: block;                                 /* Показывать кнопку при наведении на div */
     }
 
     .close-edit-message-button{
         font-size: 1.8vh;
-        color: #072E70;
+        color: var(--color1-color);
         margin-right: 3px;
 
         &:hover {
@@ -316,7 +352,6 @@
         }
     }
     
-
     .save-edit-message-button{
         display: flex;
         flex-direction: row;
@@ -324,7 +359,7 @@
         margin-right: 5px;
         font-size: 1.8vh;
         font-weight: bold;
-        color: #072E70;
+        color: var(--color1-color);
         background-color: transparent;
         height: 25px;
         padding-left: 10px;
@@ -339,14 +374,38 @@
         }
     }
 
+    .massage-div-request-edit{
+        display: flex; 
+        flex-direction: row;
+        gap: 5px;
+        margin-left: auto;
+        margin-right: 45px;
+        user-select: none;
+    }
+
+
+    /* Стили для  div с датой и кнопками копирования и перегенерации ответа*/
+
+    .massage-div-answer-settings{
+        display: flex; 
+        flex-direction: row;
+        gap: 5px;
+        margin-right: auto;
+        margin-left: 85px;
+        user-select: none;
+    }
+
+    .date-sending-message-answer{
+        font-size: 1.2vh;
+        color: #888;
+        padding-top: 1vh;
+        padding-right: 15px;
+    }
 
     .copy-message-button{
         font-size: 1.8vh;
-        color: #072E70;
-        position: absolute;
-        bottom: 0;
-        left: 100px;
-        padding-left: 50px;
+        color: var(--color1-color);
+        padding-top: 0.8vh;
 
         &:hover {
             color: #174FAD;
@@ -356,20 +415,15 @@
 
     .confirmation-copy-message{
         font-size: 1.8vh;
-        color: #072E70;
-        position: absolute;
-        bottom: 0;
-        left: 100px;
-        padding-left: 50px;
+        color: var(--color1-color);
+        padding-top: 0.8vh;
     }
 
     .regenerate-message-button{
         font-size: 2vh;
         font-weight: bold;
-        color: #072E70;
-        bottom: 0;
-        padding-top: 5px;
-        padding-left: 5px;
+        color: var(--color1-color);
+        padding-top: 0.8vh;
 
         &:hover {
             color: #174FAD;
@@ -378,13 +432,15 @@
     }
 
 
+    /* Стили сообщения-ответа во время перегенерации и ожидании ответа от LLM*/
+
     .div-loading {
         display: flex;
         flex-direction: column;
         justify-content: center; 
         align-items: center; 
         height: 10vh; 
-        width: 10vw;
+        width: 30vw;
         background-color: var(--color2-color);
         color: var(--colorText-color);
       }
@@ -418,4 +474,166 @@
         to {
           clip-path: inset(0 -1ch 0 0)
         }
+      }
+
+      .copy-cod{
+        display: flex;
+        flex-direction: row;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        border: 1px solid var(--color6-color); 
+        border-style: dashed; 
+        border-radius: 7px;
+      }
+
+      .copy-cod-button{
+        font-size: 1.5vh;
+        color: var(--color1-color);
+        height: 1.5vh;
+        user-select: none;
+        margin-top: 1.5vh;
+        margin-left: auto;
+        margin-right: 1vw;
+
+        &:hover {
+            color: #174FAD;
+            cursor: pointer;
+        }
+    }
+
+    .confirmation-copy-cod{
+        font-size: 1.5vh;
+        color: var(--color1-color);
+        height: 1.5vh;
+        user-select: none;
+        margin-top: 1.5vh;
+        margin-left: auto;
+        margin-right: 1vw;
+    }
+
+    .messages-show-chat{
+        margin-left: 3vw;
+        padding-right: 2vw;
+        height: 77vh;
+        width: 74.5vw;
+        overflow-y: auto;
+    }
+
+      .messages-show-chat::-webkit-scrollbar {
+        width: 5px;                                 /* Ширина прокрутки */
+      }
+
+      .messages-show-chat::-webkit-scrollbar-thumb {
+        background-color: var(--color1-color);      /* Цвет ползунка */
+        border-radius: 30px;
+      }
+
+      .messages-show-chat::-webkit-scrollbar-track {
+        background-color: var(--color2-color);      /* Цвет трека */
+      }
+
+    .div-loading-show-chat{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        font-size: 1.5vh; 
+        height: 100vh; 
+        width: 80vw;
+        background-color: var(--color2-color);
+        color: var(--colorText-color);
+    }
+
+    .div-empty{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 77vh;
+        width: 72vw;
+    }
+
+    .stop-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3vw;
+        height: 3.5vh;
+        border: 0.3vh solid var(--color1-color);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .cube{
+        font-size: 1.3vh;
+        color: var(--color1-color);
+        background-color: var(--color1-color);
+    }
+
+    .scroll-to-bottom-button {
+        position: fixed;
+        bottom: 12vh; 
+        left: 58.5vw; 
+        z-index: 10; 
+        border-radius: 0.5vh;
+        border: 1px solid var(--color1Trans-color);
+        background-color: var(--color1Trans-color);
+        color: var(--color1-color);
+        padding: 0.5vh;
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+
+        width: 1.8vw;
+        height: 3.9vh;
+        align-items: center;
+        justify-content: center;
+        font-size: 2vh;
+
+        &:hover {
+            background-color: var(--color1-color);
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    .scroll-to-bottom-button-barge{
+        position: fixed;
+        bottom: 12vh; 
+        left: 58.5vw; 
+        z-index: 10; 
+        width: 1.8vw;
+        height: 3.9vh;
+        align-items: center;
+        justify-content: center;
+        font-size: 2vh;
+        border-radius: 0.5vh;
+        border: 1px solid var(--color1Trans-color);
+        background-color: var(--color1Trans-color);
+        color: var(--color1-color);
+        padding: 0.5vh;
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+
+        &:hover {
+            background-color: var(--color1-color);
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    .scroll-span{
+        position: fixed;
+        bottom: 15.8vh; 
+        left: 60.2vw;  
+        z-index: 22; 
+    }
+
+    @keyframes typing {
+        from { width: 0 }
+      }
+      
+      .typing-animation {
+        overflow: hidden;
+        display: inline-block;
+        animation: typing 2s steps(40, end);
       }
